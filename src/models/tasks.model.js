@@ -21,9 +21,17 @@ module.exports = function (app) {
     finished_at: {
       type: DataTypes.DATE,
     },
-    type: {
+    is_pickup: {
       type: DataTypes.BOOLEAN,
       allowNull: false
+    },
+    succeded:{
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: true,
+    },
+    order:{
+      type: DataTypes.INTEGER,
     },
     attrs: {
       type: DataTypes.JSONB,
@@ -40,8 +48,8 @@ module.exports = function (app) {
   tasks.associate = function (models) {
     // Define associations here
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
-    tasks.belongsTo(models.destinations),
-    tasks.belongsTo(models.deliveries);
+    //tasks.belongsTo(models.deliveries);
+    //tasks.belongsTo(models.destinations);
   };
 
   return tasks;

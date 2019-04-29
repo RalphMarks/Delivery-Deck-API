@@ -19,6 +19,9 @@ module.exports = function (app) {
       type: DataTypes.STRING,
       allowNull: false
     },
+    attrs: {
+      type: DataTypes.JSONB,
+    },
   }, {
     hooks: {
       beforeCount(options) {

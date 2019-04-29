@@ -11,11 +11,15 @@ module.exports = function (app) {
       primaryKey: true,
       autoIncrement: true
     },
-    state: {
-      type: DataTypes.INTEGER,
+    is_active: {
+      type: DataTypes.BOOLEAN,
       allowNull: false
     },
     name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    user_name: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -27,7 +31,11 @@ module.exports = function (app) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    status: {
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    on_duty: {
       type: DataTypes.BOOLEAN
     },
   }, {
@@ -42,8 +50,9 @@ module.exports = function (app) {
   messengers.associate = function (models) {
     // Define associations here
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
-    messengers.belongsTo(models.locations);
+    messengers.hasMany(models.deliveries),
     messengers.belongsTo(models.companies);
+    messengers.belongsTo(models.locations);
   };
 
   return messengers;

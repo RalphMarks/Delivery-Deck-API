@@ -44,8 +44,8 @@ module.exports = function (app) {
   deliveries.associate = function (models) {
     // Define associations here
     // See http://docs.sequelizejs.com/en/latest/docs/associations/
-    deliveries.belongsTo(models.messengers),
-    deliveries.belongsTo(models.companies);
+    deliveries.belongsTo(models.companies),
+    deliveries.hasMany(models.tasks);
   };
 
   return deliveries;

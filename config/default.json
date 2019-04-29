@@ -30,5 +30,5 @@
       "passwordField": "password"
     }
   },
-  "postgres": "postgres://cfgjfhlkamkegc:20c1425c4036be425f22c366237dccac902d0aa67ad25fccf486ba7288316214@ec2-54-235-67-106.compute-1.amazonaws.com:5432/d3stef7itmej2o"
+  "postgres": "postgres://postgres:@localhost:5432/delivery_deck_api"
 }

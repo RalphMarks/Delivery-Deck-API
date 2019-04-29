@@ -20,12 +20,22 @@ module.exports = function (app) {
       allowNull: false,
       unique: true
     },
+    phone: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     password: {
       type: DataTypes.STRING,
       allowNull: false
     },
-  
-  
+    is_active: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false
+    },
+    token: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
   }, {
     hooks: {
       beforeCount(options) {
