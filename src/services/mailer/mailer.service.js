@@ -10,7 +10,7 @@ module.exports = function (app) {
   const sendEmail = {
     // eslint-disable-next-line no-unused-vars
     async create(data, params) {
-      sgMail.setApiKey('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');
+      sgMail.setApiKey('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');
 
       // eslint-disable-next-line no-console
       console.log(data);
@@ -21,7 +21,7 @@ module.exports = function (app) {
         subject: 'Activa tu cuenta ',
         text: 'Hello plain world!',
         html: '<p>Hello HTML world!</p>',
-        templateId: 'd-4277099e9e5a4b009cb9f8e7b5dd4a53',
+        templateId: 'd-f8e0703a6f0f47ecb93afe07ac495658',
         dynamic_template_data: {
           user_name: data.user_name,
           user_email:  data.user_email,

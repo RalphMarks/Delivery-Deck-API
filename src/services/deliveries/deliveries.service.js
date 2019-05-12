@@ -49,6 +49,7 @@ module.exports = function (app) {
           where:{
             state: [1, 2]
           },
+          order: [[{ model: Task, as: 'tasks' }, 'order', 'ASC' ]],
         },]
       });
     } 

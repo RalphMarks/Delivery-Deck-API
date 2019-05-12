@@ -36,6 +36,11 @@ module.exports = function (app) {
       type: DataTypes.STRING,
       allowNull: false
     },
+    is_aut_assign_active: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
+    },
   }, {
     hooks: {
       beforeCount(options) {

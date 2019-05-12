@@ -45,10 +45,6 @@ module.exports = function (app) {
   const messengersSMS = {
     async create(data, params) {
       const {messenger} = data;
-      // eslint-disable-next-line no-console
-      console.log('sms');
-      // eslint-disable-next-line no-console
-      console.log(messenger);
 
       const accountSid = 'AC952f5a351482e8c2befdd138e733d2bd'; // Your Account SID from www.twilio.com/console
       const authToken = '17258e41a41ddeab7a962be30494e8d6';   // Your Auth Token from www.twilio.com/console
